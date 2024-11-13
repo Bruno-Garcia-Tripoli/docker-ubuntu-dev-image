@@ -1,0 +1,8 @@
+services:
+  ubuntu-base:
+    container_name: ${CONTAINER_NAME:-ubuntu-base}
+    build:
+      context: .
+      args:
+        IS_DEVELOPMENT_ENVIRONMENT: ${IS_DEVELOPMENT_ENVIRONMENT:-true}
+        UBUNTU_VERSION: ${UBUNTU_VERSION:-latest}
